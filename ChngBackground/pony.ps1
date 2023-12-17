@@ -1,4 +1,4 @@
-(new-object System.Net.WebClient).DownloadFile('https://www.lostserver.com/static/pony.jpg',"$Env:Temp\pony.jpg"); 
+(new-object System.Net.WebClient).DownloadFile('https://github.com/dasougon7/USBNinja-Payloads/blob/main/ChngBackground/pony.jpg',"$Env:Temp\pony.jpg"); 
 Add-Type @"
 using System;
 using System.Runtime.InteropServices;
