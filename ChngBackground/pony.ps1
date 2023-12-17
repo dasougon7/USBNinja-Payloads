@@ -1,4 +1,7 @@
-(new-object System.Net.WebClient).DownloadFile('https://github.com/dasougon7/USBNinja-Payloads/blob/main/ChngBackground/pony.jpg',"$Env:Temp\pony.jpg"); 
+$webClient = New-Object System.Net.WebClient
+$url = "https://raw.githubusercontent.com/dasougon7/USBNinja-Payloads/main/ChngBackground/pony.jpg"
+$filePath = "$Env:Temp\pony.jpg"
+$webClient.DownloadFile($url, $filePath)
 Add-Type @"
 using System;
 using System.Runtime.InteropServices;
@@ -40,4 +43,4 @@ namespace Wallpaper
     }
 }
 "@
-[Wallpaper.Setter]::SetWallpaper("$Env:Temp\pony.jpg" , 2 )
+[Wallpaper.Setter]::SetWallpaper($filePath, 1 )
